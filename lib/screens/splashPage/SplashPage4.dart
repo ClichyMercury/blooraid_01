@@ -1,3 +1,4 @@
+import 'package:blooraid_01/screens/connection/enterEmail.dart';
 import 'package:blooraid_01/screens/splashPage/SplashScreen.dart';
 import 'package:blooraid_01/widgets/CustumButton.dart';
 import 'package:flutter/material.dart';
@@ -33,19 +34,38 @@ class _SplashPage04State extends State<SplashPage04> {
               const Column(
                 children: [
                   Text(
-                    "Don't like\nstrangers looking\nin your window ?",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 33),
+                    "Desormais, n'ayez aucune crainte concernants vos données.\nGrace à la verification des réseaux environnents, vous êtes protégés en tout temps et tout en lieux",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   )
                 ],
               ),
             ],
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-        floatingActionButton: const MyCustumButton(
-          text: "   Get Started",
-          icon: LineAwesomeIcons.arrow_right,
-          touch: SplashPage05(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => EnterYourEmail()));
+                },
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                )),
+            MyCustumButton(
+              text: "   Get Started",
+              icon: LineAwesomeIcons.arrow_right,
+              touch: SplashPage05(),
+            ),
+          ],
         ));
   }
 }

@@ -1,5 +1,3 @@
-import 'package:blooraid_01/widgets/CustumAppBar.dart';
-import 'package:blooraid_01/widgets/constant.dart';
 import 'package:blooraid_01/widgets/viewcard.dart';
 import 'package:flutter/material.dart';
 
@@ -8,39 +6,39 @@ class MySecurity extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: myCustumAppBar(context, "My Security"),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(15),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [purple, lightBleu],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
-        ),
-        child: const SingleChildScrollView(
+    return const Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(15),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 80),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Text(
+                  "My security",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
               ViewCard(
                   choose: false,
                   rowdata: "",
-                  title: "Check contacts for data leaks",
+                  title: "password manager",
                   description:
-                      "Your network is a vital part of your security. If one of your contacts has a breach, then you could be at risk as well",
-                  buttonText: "Check contacts for leaks",
-                  icon: Icons.people),
+                      "here are stored all your passwords. you also have the possibility of creating new, robust and reliable ones without necessarily retaining them",
+                  buttonText: "Access to your password manager",
+                  icon: Icons.password),
               ViewCard(
-                  choose: true,
-                  rowdata: "12h ago",
-                  title: "No new leaks",
+                  choose: false,
+                  rowdata: "",
+                  title: "Authentification",
                   description:
-                      "Xiemie scanned the internet for your data 4 times this week.",
-                  buttonText: "Check Another Email",
-                  icon: Icons.people)
+                      "Xiemie ensures that all your links and QR codes are authentic and do not pose a threat to your privacy",
+                  buttonText: "Check link or QR code",
+                  icon: Icons.check)
             ],
           ),
         ),

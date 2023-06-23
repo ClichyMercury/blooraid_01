@@ -1,96 +1,71 @@
-import 'package:blooraid_01/widgets/constant.dart';
 import 'package:flutter/material.dart';
 
 class MyListTile extends StatelessWidget {
   const MyListTile({
     super.key,
-    required this.imageName,
-    required this.data1,
-    required this.data2,
-    required this.changer,
-    required this.touch,
   });
-
-  final String imageName;
-  final String data1;
-  final String data2;
-  final bool changer;
-  final Widget touch;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => touch));
-      },
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-        height: 100,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                Container(
-                  height: 35,
-                  width: 35,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(imageName),
-                    ),
+        onTap: () {},
+        child: Container(
+          margin: const EdgeInsets.all(5),
+          padding: const EdgeInsets.all(10),
+          height: 120,
+          decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 196, 196, 196),
+              borderRadius: BorderRadius.circular(15)),
+          child: const Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Checking",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25),
                   ),
-                ),
-                SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      data1,
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      data2,
-                      style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          overflow: TextOverflow.ellipsis),
-                    )
-                  ],
-                ),
-              ],
-            ),
-            changer
-                ? Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.grey,
-                  )
-                : Container(
-                    width: 45,
-                    height: 25,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      gradient: LinearGradient(
-                        colors: [pink, bleu],
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
+                  Row(
+                    children: [
+                      Text(
+                        "\$4,567",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
                       ),
-                    ),
-                    child: Center(
-                        child: Text(
-                      "SET UP",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 8),
-                    )),
+                      Icon(Icons.arrow_downward)
+                    ],
                   )
-          ],
-        ),
-      ),
-    );
+                ],
+              ),
+              Row(
+                children: [
+                  Icon(Icons.balance),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "*****5678",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "Bank of America",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              )
+            ],
+          ),
+        ));
   }
 }

@@ -1,4 +1,5 @@
 import 'package:blooraid_01/screens/connection/enterEmail.dart';
+
 import 'package:blooraid_01/widgets/CustumButton.dart';
 import 'package:blooraid_01/widgets/constant.dart';
 import 'package:flutter/material.dart';
@@ -27,17 +28,19 @@ class _SplashPage05State extends State<SplashPage05> {
                 children: [
                   RichText(
                     text: TextSpan(
-                      text: 'Help ',
+                      text: 'Avec ',
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 33,
-                      ),
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontFamily: 'Poppins'),
                       children: <TextSpan>[
                         TextSpan(
-                            text: 'your family\n',
-                            style: TextStyle(color: bleu)),
-                        TextSpan(text: 'be safe online'),
+                            text: "l'equipe Xiemie\n",
+                            style: TextStyle(color: bleu, fontSize: 25)),
+                        TextSpan(
+                            text:
+                                ',vous avez un assistance personnalisée en cas de problème concernant votre confidentialité en ligne ou vos données personnelles'),
                       ],
                     ),
                   ),
@@ -46,11 +49,30 @@ class _SplashPage05State extends State<SplashPage05> {
             ],
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-        floatingActionButton: const MyCustumButton(
-          text: "   Get Started",
-          icon: LineAwesomeIcons.arrow_right,
-          touch: EnterYourEmail(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => EnterYourEmail()));
+                },
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                )),
+            MyCustumButton(
+              text: "   Get Started",
+              icon: LineAwesomeIcons.arrow_right,
+              touch: EnterYourEmail(),
+            ),
+          ],
         ));
   }
 }

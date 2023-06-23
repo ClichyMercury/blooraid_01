@@ -25,7 +25,8 @@ class ViewCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
       height: 350,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(18)),
+          color: Color.fromARGB(255, 207, 206, 206),
+          borderRadius: BorderRadius.circular(18)),
       child:
           Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Column(
@@ -61,7 +62,7 @@ class ViewCard extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 5),
             Text(
               title,
               style: const TextStyle(
@@ -73,7 +74,7 @@ class ViewCard extends StatelessWidget {
             Text(
               description,
               style: const TextStyle(
-                  color: Colors.grey,
+                  color: Colors.blueGrey,
                   fontSize: 15,
                   fontWeight: FontWeight.bold),
             )
@@ -84,7 +85,7 @@ class ViewCard extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [pink, bleu],
+                colors: [bleu, pink],
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
               ),

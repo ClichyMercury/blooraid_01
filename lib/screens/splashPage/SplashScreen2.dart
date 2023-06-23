@@ -1,3 +1,5 @@
+import 'package:blooraid_01/screens/connection/enterEmail.dart';
+
 import 'package:blooraid_01/screens/splashPage/SplashPage3.dart';
 import 'package:blooraid_01/widgets/CustumButton.dart';
 import 'package:blooraid_01/widgets/constant.dart';
@@ -22,22 +24,34 @@ class _SplashPage02State extends State<SplashPage02> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Hero(tag:"image",child: Image.asset("assets/images/data1.png")),
+              Hero(tag: "image", child: Image.asset("assets/images/data1.png")),
               Column(
                 children: [
                   RichText(
                     text: TextSpan(
-                      text: 'Reduce ',
+                      text: 'Avec ',
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 33,
-                      ),
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontFamily: "Poppins"),
                       children: <TextSpan>[
                         TextSpan(
-                            text: 'spam calls \n',
-                            style: TextStyle(color: purple)),
-                        TextSpan(text: 'from your phone'),
+                            text: 'Xiemie ',
+                            style: TextStyle(
+                                color: pink,
+                                fontSize: 25,
+                                fontFamily: "Poppins")),
+                        TextSpan(text: 'soyez sûr que tout vos '),
+                        TextSpan(
+                            text: 'mots de passes ',
+                            style: TextStyle(
+                                color: purple,
+                                fontFamily: "Poppins",
+                                fontSize: 20)),
+                        TextSpan(
+                            text:
+                                'sur toutes vos plateformes sont en sécurité'),
                       ],
                     ),
                   ),
@@ -46,11 +60,30 @@ class _SplashPage02State extends State<SplashPage02> {
             ],
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-        floatingActionButton: const MyCustumButton(
-          text: "   Get Started",
-          icon: LineAwesomeIcons.arrow_right,
-          touch: SplashPage03(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => EnterYourEmail()));
+                },
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                )),
+            MyCustumButton(
+              text: "   Get Started",
+              icon: LineAwesomeIcons.arrow_right,
+              touch: SplashPage03(),
+            ),
+          ],
         ));
   }
 }

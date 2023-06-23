@@ -76,12 +76,24 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: Altone
+     - family: Poppins
        fonts:
-         - asset: assets\fonts\altone\AltoneTrial-Bold.ttf
-         - asset: assets\fonts\altone\AltoneTrial-BoldOblique.ttf
-         - asset: assets\fonts\altone\AltoneTrial-Regular.ttf
-         - asset: assets\fonts\altone\AltoneTrial-RegularOblique.ttf
+         - asset: assets\fonts\poppins\Poppins-Black.ttf
+         - asset: assets\fonts\poppins\Poppins-BlackItalic.ttf
+         - asset: assets\fonts\poppins\Poppins-BoldItalic.ttf
+         - asset: assets\fonts\poppins\Poppins-ExtraBold.ttf
+         - asset: assets\fonts\poppins\Poppins-ExtraBoldItalic.ttf
+         - asset: assets\fonts\poppins\Poppins-ExtraLight.ttf
+         - asset: assets\fonts\poppins\Poppins-Italic.ttf
+         - asset: assets\fonts\poppins\Poppins-Light.ttf
+         - asset: assets\fonts\poppins\Poppins-LightItalic.ttf
+         - asset: assets\fonts\poppins\Poppins-Medium.ttf
+         - asset: assets\fonts\poppins\Poppins-MediumItalic.ttf
+         - asset: assets\fonts\poppins\Poppins-Regular.ttf
+         - asset: assets\fonts\poppins\Poppins-SemiBold.ttf
+         - asset: assets\fonts\poppins\Poppins-SemiBoldItalic.ttf
+         - asset: assets\fonts\poppins\Poppins-Thin.ttf
+         - asset: assets\fonts\poppins\Poppins-ThinItalic.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

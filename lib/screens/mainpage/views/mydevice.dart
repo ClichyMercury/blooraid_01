@@ -1,5 +1,3 @@
-import 'package:blooraid_01/widgets/CustumAppBar.dart';
-import 'package:blooraid_01/widgets/constant.dart';
 import 'package:blooraid_01/widgets/viewcard.dart';
 import 'package:flutter/material.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
@@ -9,23 +7,24 @@ class MyDevice extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: myCustumAppBar(context, "My Device"),
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(15),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [purple, lightBleu],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          ),
-        ),
-        child: const SingleChildScrollView(
+    return const Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(15.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 80),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Text(
+                  "My Device",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
               ViewCard(
                   choose: false,
                   rowdata: "",

@@ -1,4 +1,4 @@
-import 'package:blooraid_01/screens/mainpage/homepage.dart';
+import 'package:blooraid_01/screens/root/root.dart';
 
 import 'package:blooraid_01/widgets/CustumButton.dart';
 import 'package:flutter/material.dart';
@@ -50,9 +50,9 @@ class _EnterYourEmailState extends State<EnterYourEmail> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: const MyCustumButton(
-        text: "Next",
+        text: "    Next",
         icon: LineAwesomeIcons.arrow_right,
-        touch: MyHomePage(),
+        touch: Root(),
       ),
     );
   }

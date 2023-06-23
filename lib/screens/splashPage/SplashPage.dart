@@ -1,3 +1,5 @@
+import 'package:blooraid_01/screens/connection/enterEmail.dart';
+
 import 'package:blooraid_01/screens/splashPage/SplashScreen2.dart';
 import 'package:blooraid_01/widgets/CustumButton.dart';
 import 'package:blooraid_01/widgets/constant.dart';
@@ -22,7 +24,7 @@ class _SplashPage01State extends State<SplashPage01> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Hero(tag: "image",child: Image.asset("assets/images/data2.png")),
+              Hero(tag: "image", child: Image.asset("assets/images/data2.png")),
               Column(
                 children: [
                   const Text(
@@ -37,16 +39,40 @@ class _SplashPage01State extends State<SplashPage01> {
                       fontSize: 33,
                     ),
                   ),
+                  SizedBox(height: 10),
+                  Text(
+                    "Votre compagnon pour votre\n   confidentialité numérique",
+                    style: TextStyle(color: Colors.black, fontSize: 15,),
+                  )
                 ],
               ),
             ],
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-        floatingActionButton: const MyCustumButton(
-          text: "   Get Started",
-          icon: LineAwesomeIcons.arrow_right,
-          touch: SplashPage02(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => EnterYourEmail()));
+                },
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                )),
+            MyCustumButton(
+              text: "   Get Started",
+              icon: LineAwesomeIcons.arrow_right,
+              touch: SplashPage02(),
+            ),
+          ],
         ));
   }
 }
