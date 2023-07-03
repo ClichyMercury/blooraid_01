@@ -34,10 +34,10 @@ class NavigationBarItem extends StatelessWidget {
               height: 60,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(60),
-                  color: isSelected ? Colors.white : Colors.black),
+                  color: isSelected ? Colors.white : Colors.black87),
               child: Icon(
                 icon,
-                color: isSelected ? Colors.black : Colors.white,
+                color: isSelected ? Colors.black87 : Colors.white,
               ),
             ),
           ),

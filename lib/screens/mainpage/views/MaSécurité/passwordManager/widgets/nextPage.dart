@@ -1,18 +1,76 @@
 import 'package:flutter/material.dart';
 
+class NextPage extends StatelessWidget {
+  const NextPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(2),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 25,
+          ),
+          Row(
+            children: [
+              Text(
+                "Accès",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(width: 10),
+              Container(
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.black),
+                child: Center(
+                    child: Text(
+                  "2",
+                  style: TextStyle(color: Colors.white),
+                )),
+              )
+            ],
+          ),
+          MyListTile(
+            number: "1",
+            text: "Facebook",
+            data: "19/03/2021",
+            price: "9.99",
+            ontap: () {},
+          ),
+          MyListTile(
+            number: "2",
+            text: "gIThUB",
+            data: "19/05/2021",
+            price: "9.99",
+            ontap: () {},
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class MyListTile extends StatelessWidget {
   const MyListTile({
     super.key,
     required this.text,
     required this.data,
     required this.price,
-    required this.icon, required this.ontap,
+    required this.number,
+    required this.ontap,
   });
 
   final String text;
   final String data;
   final String price;
-  final IconData icon;
+  final String number;
   final VoidCallback ontap;
 
   @override
@@ -38,10 +96,9 @@ class MyListTile extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.white),
                     child: Center(
-                      child: Icon(
-                        icon,
-                        color: Colors.black,
-                        size: 30,
+                      child: Text(
+                        number,
+                        style: TextStyle(color: Colors.black, fontSize: 30),
                       ),
                     ),
                   ),

@@ -1,12 +1,13 @@
 import 'package:blooraid_01/screens/mainpage/homepage.dart';
-import 'package:blooraid_01/screens/mainpage/views/myPrivacy.dart';
-import 'package:blooraid_01/screens/mainpage/views/mySecurity.dart';
-import 'package:blooraid_01/screens/mainpage/views/myVault.dart';
-import 'package:blooraid_01/screens/mainpage/views/mydevice.dart';
+import 'package:blooraid_01/screens/mainpage/views/MonReseau/myPrivacy.dart';
+import 'package:blooraid_01/screens/mainpage/views/MaS%C3%A9curit%C3%A9/mySecurity.dart';
+import 'package:blooraid_01/screens/mainpage/views/assistance/myVault.dart';
+import 'package:blooraid_01/screens/mainpage/views/MesAppareils/mydevice.dart';
 import 'package:blooraid_01/widgets/animation/custom_opacity_animation.dart';
 import 'package:blooraid_01/widgets/bottomNavigationBar/custtom_navigation_bar.dart';
 import 'package:blooraid_01/widgets/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Root extends StatefulWidget {
   const Root({
@@ -53,39 +54,6 @@ class _RootState extends State<Root> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            "Xiemie",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: pink,
-              fontSize: 33,
-            ),
-          ),
-          elevation: 0,
-          backgroundColor: Colors.white,
-          leading: Container(
-            width: 45,
-            height: 45,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(45),
-              gradient: LinearGradient(
-                colors: [bleu, pink],
-                begin: Alignment.centerRight,
-                end: Alignment.centerLeft,
-              ),
-            ),
-          ),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.notifications,
-                  color: Colors.black,
-                  size: 40,
-                ))
-          ]),
       body: CustomOpacityAnimation(
         child: PageView(
           controller: pageController,

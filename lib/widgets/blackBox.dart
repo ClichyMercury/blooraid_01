@@ -8,13 +8,80 @@ class BlackBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 350,
+      height: 260,
+      width: double.infinity,
       decoration: BoxDecoration(
           color: Colors.black, borderRadius: BorderRadius.circular(25)),
       child: Padding(
-        padding: const EdgeInsets.all(25),
+        padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
         child: Column(
-          children: [firstRow(), secondRow(), chart(context), dateRow()],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 25,
+                  height: 25,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    gradient: LinearGradient(
+                      colors: [bleu, pink],
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.tips_and_updates,
+                    size: 18,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 5),
+                Text(
+                  "Astuces",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 19,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Text(
+              "Comment sécuriser son compte ?",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17,
+                  color: Colors.white),
+            ),
+            SizedBox(height: 10),
+            Text(
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum aliquet lorem, ut suscipit purus molestie et. Praesent aliquet risus a dapibus vehicula.",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+              ),
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(),
+                Column(
+                  children: [
+                    Text(
+                      "Plus",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Icon(
+                      Icons.arrow_downward,
+                      color: Colors.white,
+                    )
+                  ],
+                )
+              ],
+            )
+          ],
         ),
       ),
     );

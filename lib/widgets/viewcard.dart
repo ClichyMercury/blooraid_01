@@ -1,5 +1,6 @@
 import 'package:blooraid_01/widgets/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ViewCard extends StatelessWidget {
   const ViewCard(
@@ -9,7 +10,7 @@ class ViewCard extends StatelessWidget {
       required this.title,
       required this.description,
       required this.buttonText,
-      required this.icon});
+      required this.icon, required this.touch});
 
   final bool choose;
   final String rowdata;
@@ -17,6 +18,7 @@ class ViewCard extends StatelessWidget {
   final String description;
   final String buttonText;
   final IconData icon;
+  final VoidCallback touch;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class ViewCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
       height: 350,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 207, 206, 206),
+          color: const Color.fromARGB(255, 244, 245, 249),
           borderRadius: BorderRadius.circular(18)),
       child:
           Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
@@ -65,7 +67,7 @@ class ViewCard extends StatelessWidget {
             const SizedBox(height: 5),
             Text(
               title,
-              style: const TextStyle(
+              style: GoogleFonts.ptSans(
                   color: Colors.black,
                   fontSize: 30,
                   fontWeight: FontWeight.bold),
@@ -74,29 +76,27 @@ class ViewCard extends StatelessWidget {
             Text(
               description,
               style: const TextStyle(
-                  color: Colors.blueGrey,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold),
+                color: Colors.black,
+                fontSize: 15,
+              ),
             )
           ],
         ),
-        Container(
-          height: 45,
-          width: double.infinity,
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [bleu, pink],
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
+        GestureDetector(
+          onTap: touch,
+          child: Container(
+            height: 45,
+            width: double.infinity,
+            decoration: BoxDecoration(
+                color: Colors.black, borderRadius: BorderRadius.circular(10)),
+            child: Center(
+              child: Text(
+                buttonText,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold),
               ),
-              borderRadius: BorderRadius.circular(10)),
-          child: Center(
-            child: Text(
-              buttonText,
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold),
             ),
           ),
         )
