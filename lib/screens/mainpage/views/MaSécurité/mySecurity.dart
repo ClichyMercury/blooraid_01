@@ -23,7 +23,7 @@ class MySecurity extends StatelessWidget {
                   title: "Gestionnaire de mot de passe",
                   description:
                       "here are stored all your passwords. you also have the possibility of creating new, robust and reliable ones without necessarily retaining them",
-                  buttonText: "Access to your password manager",
+                  buttonText: "acceder au gestionnaire",
                   icon: Icons.password,
                   touch: () {
                     Navigator.push(
@@ -48,10 +48,10 @@ class MySecurity extends StatelessWidget {
                   touch: () {},
                   choose: false,
                   rowdata: "",
-                  title: "Authentification",
+                  title: "Authentification de lien et de code QR",
                   description:
                       "Xiemie ensures that all your links and QR codes are authentic and do not pose a threat to your privacy",
-                  buttonText: "Check link or QR code",
+                  buttonText: "Verifier lien de code QR",
                   icon: Icons.check)
             ],
           ),

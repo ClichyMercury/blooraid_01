@@ -1,13 +1,12 @@
-import 'package:blooraid_01/screens/mainpage/homepage.dart';
+import 'package:blooraid_01/screens/mainpage/views/homeAlterHis.dart';
 import 'package:blooraid_01/screens/mainpage/views/MonReseau/myPrivacy.dart';
 import 'package:blooraid_01/screens/mainpage/views/MaS%C3%A9curit%C3%A9/mySecurity.dart';
 import 'package:blooraid_01/screens/mainpage/views/assistance/myVault.dart';
 import 'package:blooraid_01/screens/mainpage/views/MesAppareils/mydevice.dart';
 import 'package:blooraid_01/widgets/animation/custom_opacity_animation.dart';
 import 'package:blooraid_01/widgets/bottomNavigationBar/custtom_navigation_bar.dart';
-import 'package:blooraid_01/widgets/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class Root extends StatefulWidget {
   const Root({
@@ -61,7 +60,7 @@ class _RootState extends State<Root> {
           padEnds: false,
           physics: const BouncingScrollPhysics(),
           children: const [
-            MyHomePage(),
+            AlterHisHome(),
             MySecurity(),
             MyPrivacy(),
             MyDevice(),

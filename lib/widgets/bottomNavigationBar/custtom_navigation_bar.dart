@@ -22,7 +22,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
       height: 80,
 
       decoration: BoxDecoration(
-        color: Colors.black,
+        color: Colors.white,
         borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
       ),
       // padding: const EdgeInsets.only(left: 10, right: 10),

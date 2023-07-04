@@ -1,3 +1,4 @@
+import 'package:blooraid_01/widgets/constant.dart';
 import 'package:flutter/material.dart';
 
 class NavigationBarItem extends StatelessWidget {
@@ -33,11 +34,22 @@ class NavigationBarItem extends StatelessWidget {
               width: 60,
               height: 60,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(60),
-                  color: isSelected ? Colors.white : Colors.black87),
+                borderRadius: BorderRadius.circular(60),
+                gradient: isSelected
+                    ? LinearGradient(
+                        colors: [pink, bleu],
+                        begin: Alignment.topLeft,
+                        end: Alignment.centerRight,
+                      )
+                    : LinearGradient(
+                        colors: [Colors.transparent, Colors.transparent],
+                        begin: Alignment.topLeft,
+                        end: Alignment.centerRight,
+                      ),
+              ),
               child: Icon(
                 icon,
-                color: isSelected ? Colors.black87 : Colors.white,
+                color: isSelected ? Colors.white : Colors.black,
               ),
             ),
           ),

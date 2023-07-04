@@ -10,7 +10,8 @@ class ViewCard extends StatelessWidget {
       required this.title,
       required this.description,
       required this.buttonText,
-      required this.icon, required this.touch});
+      required this.icon,
+      required this.touch});
 
   final bool choose;
   final String rowdata;
@@ -27,8 +28,17 @@ class ViewCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
       height: 350,
       decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 244, 245, 249),
-          borderRadius: BorderRadius.circular(18)),
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            spreadRadius: 2,
+            blurRadius: 7,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
       child:
           Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Column(
@@ -88,7 +98,8 @@ class ViewCard extends StatelessWidget {
             height: 45,
             width: double.infinity,
             decoration: BoxDecoration(
-                color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                color: Colors.black.withOpacity(0.5),
+                borderRadius: BorderRadius.circular(10)),
             child: Center(
               child: Text(
                 buttonText,

@@ -98,7 +98,7 @@ class MyListTile extends StatelessWidget {
                     child: Center(
                       child: Text(
                         number,
-                        style: TextStyle(color: Colors.black, fontSize: 30),
+                        style: TextStyle(color: Colors.black, fontSize: 20),
                       ),
                     ),
                   ),

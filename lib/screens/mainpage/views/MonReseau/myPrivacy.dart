@@ -18,8 +18,17 @@ class MyPrivacy extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
             height: 200,
             decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 244, 245, 249),
-                borderRadius: BorderRadius.circular(18)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(18),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  spreadRadius: 2,
+                  blurRadius: 7,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+            ),
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -69,7 +78,7 @@ class MyPrivacy extends StatelessWidget {
                       height: 45,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: Colors.black.withOpacity(0.5),
                           borderRadius: BorderRadius.circular(10)),
                       child: const Center(
                         child: Text(

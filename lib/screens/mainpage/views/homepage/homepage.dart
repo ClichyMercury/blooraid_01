@@ -1,7 +1,7 @@
+import 'package:blooraid_01/screens/mainpage/views/homepage/offices/offices.dart';
 import 'package:blooraid_01/widgets/MyListTile.dart';
 import 'package:blooraid_01/widgets/alertDialog.dart';
 import 'package:blooraid_01/widgets/blackBox.dart';
-import 'package:blooraid_01/widgets/constant.dart';
 import 'package:blooraid_01/widgets/myCustumAppbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,12 +29,30 @@ class _MyHomePageState extends State<MyHomePage> {
               BlackBox(),
               Padding(
                 padding: EdgeInsets.all(15.0),
-                child: Text(
-                  "Formations",
-                  style: GoogleFonts.ptSans(
-                      color: Colors.black,
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Formations",
+                      style: GoogleFonts.ptSans(
+                          color: Colors.black,
+                          fontSize: 26,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: ((context) => Offices())));
+                      },
+                      child: Text(
+                        "voir tout",
+                        style: GoogleFonts.ptSans(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               MyListTile(

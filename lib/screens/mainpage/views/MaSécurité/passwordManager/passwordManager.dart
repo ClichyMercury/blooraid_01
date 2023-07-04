@@ -15,7 +15,7 @@ class _PasswordManagerState extends State<PasswordManager>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    TabController _tabController = TabController(vsync: this, length: 3);
+    TabController _tabController = TabController(vsync: this, length: 2);
     return DefaultTabController(
       length: 2,
       child: Scaffold(
